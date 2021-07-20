@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+.footer {
+  font-size: 12px;
+  padding: 50px;
+  color: #888;
+  margin-top: 100px;
+  border-top: 1px solid #eee;
+}
+
+.footer * {
+  color: inherit;
+}
+
+address p {
+  display: flex;
+  line-height: 25px;
+}
+
+address p span {
+  position: relative;
+}
+
+address p span + span::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50%;
+  background-color: #888;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+address p span + span {
+  margin-left: 20px;
+}
+
+.copy-family {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.copyright {
+  color: #ccc;
+}
+
+.family-site {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  cursor: pointer;
+}
+
+.family-site span {
+  display: block;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+  width: 180px;
+  line-height: 40px;
+  padding-left: 20px;
+  background: no-repeat url(../../images/chevron-up.png) 142px center;
+  color: #575757;
+}
+
+.family-site-list {
+  position: absolute;
+  left: 0;
+  top: -80px;
+  line-height: 40px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  width: 180px;
+  display: none;
+  background-color: #fff;
+}
+
+.family-site-list a {
+  display: block;
+  width: 100%;
+  color: inherit;
+}
+
+.family-site-list li:hover {
+  color: #222;
+}
+
+.family-active {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  address p {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  .info__check {
+    margin-left: 10px;
+  }
+
+  .info__check::before {
+    left: -5px;
+  }
+
+  .copy-family {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .family-site {
+    margin-top: 30px;
+  }
+}
+
